@@ -137,6 +137,56 @@ function App() {
                   </div>
                 </div>
               </div>
+              <div className="activity-container">
+                <div className="image-container img-two">
+                  <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3bab6a71-c842-4a50-9fed-b4ce650cb478"
+                    alt="Hiking"
+                  />
+                  <div className="overlay">
+                    <h3>Hiking</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="activity-container">
+                <div className="image-container img-three">
+                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c8e88356-8df5-4ac5-9e1f-5b9e99685021" alt="running" />
+                  <div className="overlay">
+                    <h3>Cycling</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="activity-container">
+                <div className="image-container img-four">
+                <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e1a66078-1927-4828-b793-15c403d06411" alt="yoga" />
+                  <div className="overlay">
+                    <h3>Yoga</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="activity-container">
+                <div className="image-container img-five">
+                  <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/467cf682-03fb-4fae-b129-5d4f5db304dd"
+                    alt="Tennis"
+                  />
+                  <div className="overlay">
+                    <h3>Badminton</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="activity-container">
+                <div className="image-container img-six">
+                  <img
+                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/467cf682-03fb-4fae-b129-5d4f5db304dd"
+                    alt="Tennis"
+                  />
+                  <div className="overlay">
+                    <h3>Skipping</h3>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {/* Right content */}

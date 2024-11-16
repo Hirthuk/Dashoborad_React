@@ -198,39 +198,45 @@ main {
 .img-one{
   grid-area: 1 / 1 / 2 / 2;
 }
-.img-container {
+.image-container {
   position: relative;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
   border-radius: 10px;
-  
+  overflow: hidden; /* Ensure the overlay stays inside the container */
+  height: 100%; /* Ensure it fits the grid's allocated space */
 }
-.image-container img{
+
+.image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 10px;
 }
-.overlay{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+
+.overlay {
+  position: absolute; /* Absolutely position the overlay within the container */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transition: all 0.6s linear;
+  width: 100%; /* Fill the container's width */
+  height: 100%; /* Fill the container's height */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+  display: flex;
+  align-items: flex-end; /* Align the text to the bottom */
+  justify-content: flex-end; /* Align the text to the right */
+  border-radius: 10px; /* Match the container's border radius */
+  transition: opacity 0.6s linear; /* Smooth transition for hover effect */
+  opacity: 1; /* Default opacity */
 }
 
-.image-container:hover .overlay{
-  opacity: 0;
+.image-container:hover .overlay {
+  opacity: 0; /* Hide overlay on hover */
 }
 
-.overlay h3{
+.overlay h3 {
   margin-bottom: 8px;
   margin-right: 10px;
   color: white;
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold; /* Make it bold for better visibility */
 }
