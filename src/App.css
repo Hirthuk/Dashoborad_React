@@ -34,7 +34,6 @@ nav {
   z-index: 1;
 }
 
-
 nav ul,
 nav ul li {
   outline: 0;
@@ -179,6 +178,7 @@ main {
   margin: 15px;
   padding: 20px;
   border-radius: 15px;
+ 
 }
 
 /* Activities */
@@ -188,16 +188,35 @@ main {
   font-weight: 700;
 }
 
-.activity-container{
+.activity-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2,150px);
+  grid-template-rows: repeat(2, 150px);
   column-gap: 10px;
+  row-gap: 10px;
 }
 
-.img-one{
-  grid-area: 1 / 1 / 2 / 2;
+.img-one {
+  grid-area: 1 / 1 / 2 / 2; /* row-start / column-start / row-end / column-end */
 }
+.img-two {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.img-three {
+  display: block;
+  grid-area: 1 / 2 / 3/ 4;
+}
+.img-four {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.img-five {
+  grid-area: 1 / 5 / 2 / 6;
+}
+.img-six {
+  display: block;
+  grid-area: 2 / 4 / 3 / 6;
+}
+
 .image-container {
   position: relative;
   margin-bottom: 10px;
@@ -206,6 +225,7 @@ main {
   overflow: hidden; /* Ensure the overlay stays inside the container */
   height: 100%; /* Ensure it fits the grid's allocated space */
 }
+
 
 .image-container img {
   width: 100%;
@@ -220,7 +240,12 @@ main {
   left: 0;
   width: 100%; /* Fill the container's width */
   height: 100%; /* Fill the container's height */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
   display: flex;
   align-items: flex-end; /* Align the text to the bottom */
   justify-content: flex-end; /* Align the text to the right */
@@ -240,3 +265,6 @@ main {
   font-size: 1.2rem; /* Adjust font size */
   font-weight: bold; /* Make it bold for better visibility */
 }
+
+/* Left bottom content */
+
