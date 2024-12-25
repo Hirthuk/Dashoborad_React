@@ -4,7 +4,8 @@
   min-height: 100%;
   min-width: 100%;
 
-  background-color: #f0f0f0; /* Optional background color */
+  background-color: #f0f0f0;
+  /* Optional background color */
   font-family: "SUSE", sans-serif;
   display: flex;
   align-items: center;
@@ -120,6 +121,7 @@ main {
   border-bottom-right-radius: 20px;
   background-color: rgb(73, 57, 113);
 }
+
 .nav-item b:nth-child(2) {
   position: absolute;
   bottom: -15px;
@@ -128,6 +130,7 @@ main {
   background: white;
   display: none;
 }
+
 .nav-item b:nth-child(2)::before {
   content: "";
   position: absolute;
@@ -143,6 +146,7 @@ main {
 .nav-item.active b:nth-child(2) {
   display: block;
 }
+
 .nav-item.active a {
   text-decoration: none;
   color: black;
@@ -178,7 +182,7 @@ main {
   margin: 15px;
   padding: 20px;
   border-radius: 15px;
- 
+
 }
 
 /* Activities */
@@ -197,21 +201,27 @@ main {
 }
 
 .img-one {
-  grid-area: 1 / 1 / 2 / 2; /* row-start / column-start / row-end / column-end */
+  grid-area: 1 / 1 / 2 / 2;
+  /* row-start / column-start / row-end / column-end */
 }
+
 .img-two {
   grid-area: 2 / 1 / 3 / 2;
 }
+
 .img-three {
   display: block;
   grid-area: 1 / 2 / 3/ 4;
 }
+
 .img-four {
   grid-area: 1 / 4 / 2 / 5;
 }
+
 .img-five {
   grid-area: 1 / 5 / 2 / 6;
 }
+
 .img-six {
   display: block;
   grid-area: 2 / 4 / 3 / 6;
@@ -222,8 +232,10 @@ main {
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
   border-radius: 10px;
-  overflow: hidden; /* Ensure the overlay stays inside the container */
-  height: 100%; /* Ensure it fits the grid's allocated space */
+  overflow: hidden;
+  /* Ensure the overlay stays inside the container */
+  height: 100%;
+  /* Ensure it fits the grid's allocated space */
 }
 
 
@@ -235,36 +247,45 @@ main {
 }
 
 .overlay {
-  position: absolute; /* Absolutely position the overlay within the container */
+  position: absolute;
+  /* Absolutely position the overlay within the container */
   top: 0;
   left: 0;
-  width: 100%; /* Fill the container's width */
-  height: 100%; /* Fill the container's height */
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for better visibility */
+  width: 100%;
+  /* Fill the container's width */
+  height: 100%;
+  /* Fill the container's height */
+  background: rgba(0,
+      0,
+      0,
+      0.5);
+  /* Semi-transparent background for better visibility */
   display: flex;
-  align-items: flex-end; /* Align the text to the bottom */
-  justify-content: flex-end; /* Align the text to the right */
-  border-radius: 10px; /* Match the container's border radius */
-  transition: opacity 0.6s linear; /* Smooth transition for hover effect */
-  opacity: 1; /* Default opacity */
+  align-items: flex-end;
+  /* Align the text to the bottom */
+  justify-content: flex-end;
+  /* Align the text to the right */
+  border-radius: 10px;
+  /* Match the container's border radius */
+  transition: opacity 0.6s linear;
+  /* Smooth transition for hover effect */
+  opacity: 1;
+  /* Default opacity */
 }
 
 .image-container:hover .overlay {
-  opacity: 0; /* Hide overlay on hover */
+  opacity: 0;
+  /* Hide overlay on hover */
 }
 
 .overlay h3 {
   margin-bottom: 8px;
   margin-right: 10px;
   color: white;
-  font-size: 1.2rem; /* Adjust font size */
-  font-weight: bold; /* Make it bold for better visibility */
+  font-size: 1.2rem;
+  /* Adjust font size */
+  font-weight: bold;
+  /* Make it bold for better visibility */
 }
 
 /* Left bottom content */
-

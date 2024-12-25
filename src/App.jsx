@@ -120,7 +120,7 @@ function App() {
           </ul>
         </nav>
         {/* Content */}
-        <section class="content">
+        <section className="content">
           {/* Left Content */}
           <div class="left-content">
             <div class="activities">
@@ -187,7 +187,14 @@ function App() {
                 </div>
               </div>
             </div>
-           
+            {/* Left Bottom */}
+           <div className="left-bottom">
+            <h1>Left-Bottom</h1>
+            {/* Weekly schedule */}
+            <div className="weekly-schedule">
+
+            </div>
+           </div>
           </div>
           
           
