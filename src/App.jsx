@@ -15,7 +15,7 @@ function App() {
     ids.forEach((item, index) => {
       if (item == getId) {
         document.getElementById(getId).className = "nav-item active";
-        console.log(index);
+        // console.log(index);
       }
     });
     const index = ids.indexOf(getId);
@@ -26,6 +26,39 @@ function App() {
     });
   }
 
+  const date = new Date();
+  const todayDate = date.getDate();
+  const todayDay = date.getDay();
+  const calendarActivities = ["Running", "Jogging", "Cycling", "Swimming", "Jumping rope", "Planks", "Pull-ups", "Yoga", "Rowing"]
+  const count = calendarActivities.length;
+  let randomNumber = () => {
+    return Math.floor(Math.random() * count) + 1; }
+  let randomArray = [];
+  for (let index = 0; index < count; index++) {
+    randomArray.push(randomNumber());
+    
+  }
+ 
+  const uniqueRandomArray = [...new Set(randomArray)];
+  // console.log(uniqueRandomArray);
+
+  const activityObject = {
+    activity1: calendarActivities[uniqueRandomArray[0]],
+    activity2: calendarActivities[uniqueRandomArray[1]],
+    activity3: calendarActivities[uniqueRandomArray[2]],
+    activity4: calendarActivities[uniqueRandomArray[3]],
+}
+
+// console.log(activityObject.activity1); // To get desired element from the object
+const key = "activity1";
+// console.log(activityObject[key]); //Another way based on the key.
+// Below for loop using this concept dynamically assign key balues
+// to print the values in the object one by one keyvariable and iterates its property one by one
+for(let keyvariable in activityObject) {
+  console.log(activityObject[keyvariable]);
+}
+
+ 
   return (
     <div className="App">
       <main>
@@ -188,16 +221,32 @@ function App() {
               </div>
             </div>
             {/* Left Bottom */}
-           <div className="left-bottom">
-            <h1>Left-Bottom</h1>
-            {/* Weekly schedule */}
-            <div className="weekly-schedule">
+            <div className="left-bottom">
 
+              {/* Weekly schedule */}
+              <div className="weekly-schedule">
+                <h1>Weekly Schedule</h1>
+                <div className="calendar">
+                  <div className="day-and-activity activity-one">
+                    <div className="day">
+                      <h1>{todayDate}</h1>
+                      <p>{todayDay}</p>
+                    </div>
+                    <div className="activity">
+                      <h2>activityObject.activity1</h2>
+                      <div className="participants">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
             </div>
-           </div>
           </div>
-          
-          
+
+
           {/* Right content */}
           <div className="right-content">
 
