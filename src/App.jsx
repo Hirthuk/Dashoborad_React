@@ -28,17 +28,20 @@ function App() {
 
   const date = new Date();
   const todayDate = date.getDate();
-  const todayDay = date.getDay();
+  const daysName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const todayDay = daysName[date.getDay()];
+  console.log(todayDay);
   const calendarActivities = ["Running", "Jogging", "Cycling", "Swimming", "Jumping rope", "Planks", "Pull-ups", "Yoga", "Rowing"]
   const count = calendarActivities.length;
   let randomNumber = () => {
-    return Math.floor(Math.random() * count) + 1; }
+    return Math.floor(Math.random() * count) + 1;
+  }
   let randomArray = [];
   for (let index = 0; index < count; index++) {
     randomArray.push(randomNumber());
-    
+
   }
- 
+
   const uniqueRandomArray = [...new Set(randomArray)];
   // console.log(uniqueRandomArray);
 
@@ -47,18 +50,40 @@ function App() {
     activity2: calendarActivities[uniqueRandomArray[1]],
     activity3: calendarActivities[uniqueRandomArray[2]],
     activity4: calendarActivities[uniqueRandomArray[3]],
-}
+  }
 
-// console.log(activityObject.activity1); // To get desired element from the object
-const key = "activity1";
-// console.log(activityObject[key]); //Another way based on the key.
-// Below for loop using this concept dynamically assign key balues
-// to print the values in the object one by one keyvariable and iterates its property one by one
-for(let keyvariable in activityObject) {
-  console.log(activityObject[keyvariable]);
-}
+  // console.log(activityObject.activity1); // To get desired element from the object
+  const key = "activity1";
+  // console.log(activityObject[key]); //Another way based on the key.
+  // Below for loop using this concept dynamically assign key balues
+  // to print the values in the object one by one keyvariable and iterates its property one by one
+  for (let keyvariable in activityObject) {
+    console.log(activityObject[keyvariable]);
+  }
 
- 
+  const calendarImages = [{
+    src: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c61daa1c-5881-43f8-a50f-62be3d235daf",
+    i: 1
+
+  },
+  {
+    src: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/90affa88-8da0-40c8-abe7-f77ea355a9de",
+    i: 2
+
+  },
+
+  {
+    src: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/07d4fa6f-6559-4874-b912-3968fdfe4e5e",
+    i: 3
+
+  },
+  {
+    src: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e082b965-bb88-4192-bce6-0eb8b0bf8e68",
+    i: 4
+
+  }] //array of objects
+
+
   return (
     <div className="App">
       <main>
@@ -233,11 +258,17 @@ for(let keyvariable in activityObject) {
                       <p>{todayDay}</p>
                     </div>
                     <div className="activity">
-                      <h2>activityObject.activity1</h2>
+                      <h2>{activityObject.activity1}</h2>
                       <div className="participants">
+                        {calendarImages.map((images) => {
+                          return <img key={images.i} src={images.src} alt="" style={{ "--i": images.i }} />
+                        })}
+
+
 
                       </div>
                     </div>
+                    <button className="btn">Join</button>
                   </div>
 
                 </div>
