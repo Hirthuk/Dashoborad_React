@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install all dependencies (including development dependencies)
-RUN npm install --production=false
+RUN npm install 
 
 # Copy all source files
 COPY . .
