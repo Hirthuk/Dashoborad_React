@@ -10,6 +10,15 @@ COPY package*.json ./
 # Install all dependencies (including devDependencies)
 RUN npm install --include=dev
 
+# Debug: List installed packages to verify vite is installed
+RUN ls -l node_modules/.bin | grep vite
+
+# Debug: Check if vite is installed globally
+RUN npm list -g vite
+
+# Debug: Check if vite is installed locally
+RUN npm list vite
+
 # Copy the rest of the application code
 COPY . .
 
